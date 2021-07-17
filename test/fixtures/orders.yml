@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  amout: 1.5
+  status: 1
+  date_to_send: 2021-07-17
+
+two:
+  user: two
+  amout: 1.5
+  status: 1
+  date_to_send: 2021-07-17
