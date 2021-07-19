@@ -50,15 +50,15 @@ class User < ApplicationRecord
 
   def send_menu_message
     sleep 1
-    ActionCable.server.broadcast 'room_channel', content: {type: 0, menu: true, user_id: self.id}
+    broadcast_action(menu: true, message: { user_id: self.id })
   end
 
   def send_deposit_message
-    ActionCable.server.broadcast 'room_channel', content: {type: 0, message: {message: 'Indique su Rut seguido de la fecha a consultar ej: 20236734-a 20/07/2021'}}
+    broadcast_action(menu: false, message: { message: I18n.t(:indicated_rut) })
   end
 
   def send_paper_request_message
-    ActionCable.server.broadcast 'room_channel', content: {type: 0, message: {message: 'Indique su Rut seguido de la fecha y la cantidad a solicitar Ej: 20236734-a/Calle #34 El portillo/50'}}
+    broadcast_action(menu: false, message: { message: I18n.t(:rut_address_quantity) })
   end
 
   def has_order_payments?
@@ -67,7 +67,7 @@ class User < ApplicationRecord
     if orders.present?
       return orders.present?
     else
-      ActionCable.server.broadcast 'room_channel', content: {type: 0, message: {message: 'Saldo insuficiente para generar una orde de papel'}}
+      broadcast_action(menu: false, message: { message: I18n.t(:not_balance) })
       sleep 1
       self.to_menu!
       return false
@@ -77,6 +77,12 @@ class User < ApplicationRecord
   end
 
   def send_economic_message
-    ActionCable.server.broadcast 'room_channel', content: {type: 0, message: {message: 'Cual indicador economico quiere conocer? Opciones: uf, utm'}} 
+    broadcast_action(menu: false, message: { message: I18n.t(:question_indicator) })
+  end
+
+  private
+  
+  def broadcast_action(menu: false, message: {}, current_user: nil)
+    ActionCable.server.broadcast 'room_channel', content: { type: 0, menu: menu, message: message }
   end
 end

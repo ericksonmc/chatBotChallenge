@@ -11,7 +11,7 @@ def clear_step
 end
 
 def find_user(telegram_id, first_name)
-  user = User.find_by(telegram_id: telegram_id)
+  user = User.last
   unless user.present?
     user = User.create(telegram_id: telegram_id, name: first_name)
   end

@@ -29,13 +29,14 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
+es:
   hello_message: 'Para empezar, me envias tu nombre y rut? Ej: Erickson/20236734-A'
-  not_orders: You have no pending payment orders
-  generated_order: 'A purchase order for paper rolls has been generated successfully, OrderID: %{order_id}'
-  have_order: 'You have a pending order of: %{amount}'
-  incorrect_indicator: 'Incorrect economic indicator, options: uf, utm. If you want to go back to the main menu /menu'
-  indicated_rut: 'Indicate your Rut followed by the date to consult eg: 20236734-a 07/20/2021'
-  rut_address_quantity: 'Indicate your Rut followed by the date and the amount to request Ex: 20236734-a / Calle # 34 El portillo / 50'
-  not_balance: Insufficient balance to generate a paper order
-  question_indicator: 'Which economic indicator do you want to know? Options: uf, utm'
+  not_orders: No Tiene ordenes de pago pendientes
+  generated_order: 'Se ha generado una orden de compra de rollos de papel satisfactoriamente, OrderID: %{order_id}'
+  have_order: 'Tiene una orden pendiente de: %{amount}'
+  incorrect_indicator: "Indicador ecnomico incorrecto, opciones: uf, utm. Si desea volver al menu principal /menu"
+  indicated_rut: 'Indique su Rut seguido de la fecha a consultar ej: 20236734-a 20/07/2021'
+  rut_address_quantity: 'Indique su Rut seguido de la fecha y la cantidad a solicitar Ej: 20236734-a/Calle #34 El portillo/50'
+  not_balance: Saldo insuficiente para generar una orde de papel
+  question_indicator: 'Cual indicador economico quiere conocer? Opciones: uf, utm'
+
