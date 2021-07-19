@@ -5,22 +5,16 @@ class ChatsController < ApplicationController
   def index;end
 
   def new
-    @chats = Chat.all 
-
     @chat = Chat.new 
   end
 
   def create
-    # type: 0 => Bot
-    # type: 1 => Person
-
     @chat = Chat.new(chat_params)
 
     
     if @chat.save
       ActionCable.server.broadcast 'room_channel', content: {type: 1, message: @chat}
       
-      # sleep 1
       if @chat.message.start_with? '/'
         case @chat.message.downcase
         when '/depositos'

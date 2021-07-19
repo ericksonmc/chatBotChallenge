@@ -19,8 +19,6 @@ Things you may want to cover:
   * Rails db:migrate
   * Rails db:seed
 
-### Database initialization
-
 ### Services (job queues, cache servers, search engines, etc.)
   * MindicadorServices
     * Use to find Economic Indicators (uf, utm)
@@ -29,29 +27,28 @@ Things you may want to cover:
     * Use to create order to paper rolls request
 
 ### Deployment instructions
-  Install Ruby Version 2.6.6
-  Install node 15.2.1 Optional: Using Nvm => https://github.com/nvm-sh/nvm
+  * Install Ruby Version 2.6.6
+  * Install node 15.2.1 Optional: Using Nvm => https://github.com/nvm-sh/nvm
 
-  git clone https://github.com/ericksonmc/chatBotTelegram
+  * git clone https://github.com/ericksonmc/chatBotChallenge.git
 
-  bundle install
+  * bundle install
 
-  Run Commans in Database Creation
+  * Setup Databse Creation
+  
+  * Rails s
 
-  Rails s
-
-  Root Route: localhost:<port>
+    * Root Route: localhost:<port>
 
 ### Use Telegram Bot (Optional)
 
-  To run telegram bot
+  * To run telegram bot
 
-  ruby telegram/bot.rb
+  * ruby telegram/bot.rb
 
-  Open Telegram App
+  * Open Telegram App
 
-  https://t.me/develativeChatBot
-
-  This bot is optimize for use with Bot App on Mobile Device but workin with webApp too
+    * Bot: https://t.me/develativeChatBot
+      * This bot is optimize for use with Bot App on Mobile Device but workin with webApp too
 
   

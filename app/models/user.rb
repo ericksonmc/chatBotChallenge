@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :paper_requests, dependent: :destroy
 
+  #steps for telegram bot  
   enum step: { 
     deposits: 1,
     paper_roll_request: 2,
