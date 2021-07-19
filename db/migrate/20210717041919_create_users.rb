@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
     create_table :users do |t|
       t.string :name
       t.integer :telegram_id
-      t.integer :root_id
+      t.string :root_id
       t.integer :step
 
       t.timestamps

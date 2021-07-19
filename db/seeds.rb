@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+@user = User.create({rut: '20236734-a', name: 'erickson'})
+
+@user.orders.create({amount: 1000000,date_to_send: Date.tomorrow, rut: @user.rut})

@@ -5,20 +5,53 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## Ruby version 
+  2.6.6
 
-* System dependencies
+### System dependencies
+  Rails 6.1.3
+  Node 15.2.1
+  
+### Configuration
 
-* Configuration
+### Database creation
+  * Rails db:create
+  * Rails db:migrate
+  * Rails db:seed
 
-* Database creation
+### Database initialization
 
-* Database initialization
+### Services (job queues, cache servers, search engines, etc.)
+  * MindicadorServices
+    * Use to find Economic Indicators (uf, utm)
 
-* How to run the test suite
+  * PaperRequestsServices
+    * Use to create order to paper rolls request
 
-* Services (job queues, cache servers, search engines, etc.)
+### Deployment instructions
+  Install Ruby Version 2.6.6
+  Install node 15.2.1 Optional: Using Nvm => https://github.com/nvm-sh/nvm
 
-* Deployment instructions
+  git clone https://github.com/ericksonmc/chatBotTelegram
 
-* ...
+  bundle install
+
+  Run Commans in Database Creation
+
+  Rails s
+
+  Root Route: localhost:<port>
+
+### Use Telegram Bot (Optional)
+
+  To run telegram bot
+
+  ruby telegram/bot.rb
+
+  Open Telegram App
+
+  https://t.me/develativeChatBot
+
+  This bot is optimize for use with Bot App on Mobile Device but workin with webApp too
+
+  

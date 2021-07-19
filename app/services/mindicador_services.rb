@@ -1,5 +1,5 @@
 class MindicadorServices
-
+  include ApplicationHelper
   def initialize(indicator)
     @indicator = indicator
   end
@@ -15,6 +15,6 @@ class MindicadorServices
 
   def get_response(request)
     data = JSON.parse(request.body)
-    "El valor del indicador #{@indicator} es de: #{data["serie"][0]["valor"]} #{data['unidad_medida']}"
+    "El valor del indicador #{parse_amount(@indicator)} es de: #{data["serie"][0]["valor"]} #{data['unidad_medida']}"
   end
 end
