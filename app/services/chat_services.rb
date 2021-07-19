@@ -31,7 +31,6 @@ class ChatServices
     if @current_user.menu?
       broadcast_action(menu: true, message: { user_id: @current_user.id })
     elsif @current_user.deposits?
-      byebug
       if order_payment.present?
         broadcast_action(message: { message: I18n.t(:have_order, amount: order_payment.amount) })
         @current_user.to_menu!

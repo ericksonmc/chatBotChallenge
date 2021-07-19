@@ -3,7 +3,6 @@ en:
   generated_order: 'A purchase order for paper rolls has been generated successfully,
     OrderID: %{order_id}'
   have_order: 'You have a pending order of: %{amount}'
-  hello_message: 'Para empezar, me envias tu nombre y rut? Ej: Erickson/20236734-A'
   incorrect_indicator: 'Incorrect economic indicator, options: uf, utm. If you want
     to go back to the main menu /menu'
   indicated_rut: 'Indicate your Rut followed by the date to consult eg: 20236734-a
@@ -14,3 +13,4 @@ en:
     utm'
   rut_address_quantity: 'Indicate your Rut followed by the date and the amount to
     request Ex: 20236734-a / Calle # 34 El portillo / 50'
+  welcome_message: 'To start, can you send me your name and rut? Ex: Erickson/20236734-A'

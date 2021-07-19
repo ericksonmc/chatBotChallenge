@@ -5,7 +5,8 @@ class ChatsController < ApplicationController
   def index;end
 
   def new
-    @chat = Chat.new 
+    @chat = Chat.new
+    @welcome_message = I18n.t(:welcome_message)
   end
 
   def create

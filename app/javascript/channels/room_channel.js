@@ -1,24 +1,9 @@
 import consumer from "./consumer"
 
 consumer.subscriptions.create("RoomChannel", {
-  connected() {
-    setTimeout(()=>{
-      document.getElementById("new_message").insertAdjacentHTML("beforeend",
-        `
-        <li class='message left appeared'>
-          <div class='avatar'></div>
-            <div class='text_wrapper'>
-              <div class='text'>Para empezar, me envias tu nombre y rut? Ej: Erickson/20236734-A </br>
-            </div>
-          </div>
-        </li>`
-      )
-    },500)
-  },
-
+  connected() {},
   disconnected() {
     console.log('desconectando')
-    // Called when the subscription has been terminated by the server
   },
 
   received(data) {

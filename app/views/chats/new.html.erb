@@ -8,7 +8,13 @@
         <div class="title">Chat</div>
     </div>
     <ul id="new_message" class="messages">
-      <%# messages %>
+      <li class='message left appeared'>
+        <div class='avatar'></div>
+        <div class='text_wrapper'>
+          <div class='text'><%= @welcome_message %></div>
+        </div>
+      </li>
+      
     </ul>
     <div class="bottom_wrapper clearfix">
       <%= form_for(@chat, remote: true) do |form| %>
