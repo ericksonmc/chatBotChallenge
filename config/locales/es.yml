@@ -1,42 +1,14 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
+---
 es:
-  hello_message: 'Para empezar, me envias tu nombre y rut? Ej: Erickson/20236734-A'
-  not_orders: No Tiene ordenes de pago pendientes
-  generated_order: 'Se ha generado una orden de compra de rollos de papel satisfactoriamente, OrderID: %{order_id}'
+  generated_order: 'Se ha generado una orden de compra de rollos de papel satisfactoriamente,
+    OrderID: %{order_id}'
   have_order: 'Tiene una orden pendiente de: %{amount}'
-  incorrect_indicator: "Indicador ecnomico incorrecto, opciones: uf, utm. Si desea volver al menu principal /menu"
+  hello_message: 'Para empezar, me envias tu nombre y rut? Ej: Erickson/20236734-A'
+  incorrect_indicator: 'Indicador ecnomico incorrecto, opciones: uf, utm. Si desea
+    volver al menu principal /menu'
   indicated_rut: 'Indique su Rut seguido de la fecha a consultar ej: 20236734-a 20/07/2021'
-  rut_address_quantity: 'Indique su Rut seguido de la fecha y la cantidad a solicitar Ej: 20236734-a/Calle #34 El portillo/50'
   not_balance: Saldo insuficiente para generar una orde de papel
+  not_orders: No Tiene ordenes de pago pendientes
   question_indicator: 'Cual indicador economico quiere conocer? Opciones: uf, utm'
-
+  rut_address_quantity: 'Indique su Rut seguido de la fecha y la cantidad a solicitar
+    Ej: 20236734-a/Calle #34 El portillo/50'

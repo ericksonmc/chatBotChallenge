@@ -22,6 +22,7 @@ consumer.subscriptions.create("RoomChannel", {
   },
 
   received(data) {
+    console.log(data)
     if(eval(data.content.menu)){
       document.getElementById("new_chat").insertAdjacentHTML('beforeend', `<input type="hidden" name="user_id" value="${data.content.message.user_id}"/>`);
       document.getElementById("new_message").insertAdjacentHTML("beforeend",
