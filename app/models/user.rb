@@ -19,12 +19,8 @@ class User < ApplicationRecord
     state :menu, initial: true
     state :deposits
     state :papper
-    state :paper_roll_request
     state :economic_indicators
-    state :deposit_params
-    state :getting
-    state :getting_quantity
-    state :getting_indicator
+
 
     event :to_menu do
       transitions from: [:deposits,:papper, :menu, :economic_indicators], to: :menu
