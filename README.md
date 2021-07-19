@@ -38,7 +38,7 @@ Things you may want to cover:
   
   * Rails s
 
-    * Root Route: localhost:<port>
+    * Root Route: localhost:port
 
 ### Use Telegram Bot (Optional)
 
